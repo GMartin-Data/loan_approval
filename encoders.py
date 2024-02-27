@@ -1,6 +1,10 @@
 """
 Cyclical encoding for date features preprocessing
 """
+
+from sklearn.base import BaseEstimator, TransformerMixin
+
+
 class CyclicalEncoder(BaseEstimator, TransformerMixin):
     """Meant to encode time data with cycles (days of week, month...)"""
     def __init__(self, column_name, cycle_length):
